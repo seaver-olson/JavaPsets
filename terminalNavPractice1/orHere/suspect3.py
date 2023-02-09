@@ -1,5 +1,5 @@
 def func1():
-    print("KABOOM")
+    print("SeaverOlson")
 def func2():
     func1()
 def func3():
