@@ -22,8 +22,11 @@ public class Student
     
     public int getStudentImprovement()
     {
-		System.out.println("getStudentImprovement has not yet been implemented...");
-        return -1;
+        int improvement = 0;
+        for (int i = 0; i < numExamsTaken - 1; i++){
+            improvement += exams[i + 1] - exams[i];
+        }
+        return improvement;
     }
     
     public String getName()

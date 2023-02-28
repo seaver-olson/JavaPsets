@@ -11,8 +11,15 @@ public class Classroom
     
     public Student getMostImprovedStudent()
     {
-		System.out.println("getMostImprovedStudent has not yet been implemented...");
-        return null;
+        Student mostImproved = students[0];
+        for(int i = 1; i < numStudentsAdded; i++)
+        {
+            if(students[i].getStudentImprovement() > mostImproved.getStudentImprovement())
+            {
+                mostImproved = students[i];
+            }
+        }
+        return mostImproved;
     }
     
     public void addStudent(Student s)

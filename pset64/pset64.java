@@ -53,8 +53,14 @@ public class pset64{
     
 	public static double median(int[] arr)
     {
-		System.out.println("median has not yet been implemented...");
-        return -1.0;
+		if (arr.length % 2 == 0){
+			int mid = arr.length / 2;
+			return (arr[mid] + arr[mid - 1]) / 2.0;
+		}
+		else{
+			int mid = arr.length / 2;
+			return arr[mid];
+		}
     }
 
 	/* 2) Write a method called findMultipleOfThree that returns the last value 
@@ -64,12 +70,16 @@ public class pset64{
 
 	public static int findMultipleOfThree(int[] arr)
     {
-		System.out.println("findMultipleOfThree has not yet been implemented...");
+		for (int i = arr.length - 1; i >= 0; i--){
+			if (arr[i] % 3 == 0){
+				return arr[i];
+			}
+		}
         return -1;
     }
 
 	/* 3) Complete the getStudentImprovement method in the Student class.
-
+	
 	To do this, 
 
 		1. Find the difference between a given student's successive exams.
